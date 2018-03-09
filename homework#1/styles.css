@@ -1,0 +1,43 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+	padding: 1em;
+	background-color: #24A5CC;
+	color: black;
+	text-align: center;
+}
+
+div.container {
+	flex: 1;
+	display: flex;
+}
+
+nav {
+	width: 100px;
+	margin: 0;
+	padding: 1em;
+}
+
+nav ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+article {
+	flex: 1;
+	background-color: #E7F4E9;
+	margin-left: 100px;
+	padding: 1em;
+}
+
+footer {
+	background-color: #24A5CC;
+	padding: 1em;
+	color: black;
+	text-align: center;
+}
