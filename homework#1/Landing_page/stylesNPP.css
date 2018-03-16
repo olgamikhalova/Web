@@ -1,0 +1,110 @@
+body {
+	padding: 0;
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {  
+    display: flex;
+} 
+
+header {
+	color: black;
+	text-align: center;
+	flex: 1;
+}
+
+nav {
+	padding-right: 2em;
+	padding-top: 2em;
+	text-align: right;
+	flex: 6;
+}
+
+.navbar a {
+	color: black;
+	text-decoration: none;
+	margin: 2em;	
+}
+
+.navbar span {
+	color: #1abc9c;	
+}
+
+.container {  
+    display: flex;
+	background-color: #1abc9c;
+}
+
+img {
+	max-width: 100%;
+	margin-top: 20px;
+}
+
+.products {
+	color: white;
+	margin: 50px;
+}
+
+.products button {
+	padding: 15px 25px;
+	font-size: 18px;
+	background-color: #1abc9c;
+    color: #fff;
+	border: 2px solid white;
+	border-radius: 4px;	
+	margin-top: 20px;	
+}
+
+.about_us {  
+	display: flex;
+	text-align: center;
+	padding: 3em;
+}
+
+#android, #brackets, #cloud {
+	font-size: 30px;
+	color: white;
+	background-color: #1abc9c;
+	padding: 20px;
+	border-radius: 50%;
+}
+
+.footer {  
+	background-color: #1abc9c;
+}
+
+.form_container_1 {  
+	display: flex;
+	flex-direction: column;	
+	align-items: center;
+    justify-content: center;
+	color: white;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	width: 40%;	
+}
+
+.form input, textarea, p {
+	margin: 5px;
+}
+
+.email input {
+	background-color: #1abc9c;
+    color: white;
+	border-radius: 4px;
+	border: 2px solid white;
+	padding: 0.5em;
+	margin: 20px;
+	font-size: 18px;
+	width: 150px;
+}
+
+@media screen and (max-width: 700px) {
+    .about_us, .container {   
+        flex-direction: column;
+    }
+}
