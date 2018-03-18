@@ -4,11 +4,11 @@ body {
 	font-family: Arial, Helvetica, sans-serif;
 }
 
-.navbar {  
+.header {  
     display: flex;
 } 
 
-header {
+.logo {
 	color: black;
 	text-align: center;
 	flex: 1;
@@ -21,13 +21,13 @@ nav {
 	flex: 6;
 }
 
-.navbar a {
+.header a {
 	color: black;
 	text-decoration: none;
 	margin: 2em;	
 }
 
-.navbar span {
+.header span {
 	color: #1abc9c;	
 }
 
