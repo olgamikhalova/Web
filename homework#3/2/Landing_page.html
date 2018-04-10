@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Landing page</title>
+		<link rel="stylesheet" href="styles_npp.css">
+</head>
+<body>
+	<div class="header">
+		<div class="logo">
+			<h1>N<span>++</span></h1>
+		</div>
+		<nav>
+			<a href="#products">PRODUCTS</a>
+            <a href="#aboutUs">ABOUT US</a>
+            <a href="#contactUs">CONTACT US</a>
+		</nav>
+	</div>	
+	<div class="container" id="products">
+		<div class="image"><img src="iphone.png" alt="Iphone">			
+		</div>
+		<div class="products">
+			<h1>Our awesome app is ready to use!</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor.</p>
+			<button>Buy now!</button>			
+		</div>		
+	</div>	
+	<div class="about_us" id="aboutUs">
+		<div class="box_1">
+			<i class="fas fa-code" id="brackets"></i>
+			<h4>Mobile development</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet.</p>
+		</div>
+		<div class="box_2">
+			<i class="fab fa-android" id="android"></i>
+			<h4>Web development</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet.</p>
+		</div>
+		<div class="box_3">
+			<i class="fas fa-cloud" id="cloud"></i>
+			<h4>Hightload</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet.</p>
+		</div>
+	</div>		
+	<div class="footer" id="contactUs">	
+		<div class="form_container_1">				
+			<h1>Contact us!</h1>			
+			<div class="form"><input type="text" name="firstname" placeholder="Type here your name, please">
+				<input type="email" name="email" placeholder="Type here your email, please">
+				<input type="password" name="psw" placeholder="Type here your password, please">
+				<input type="tel" name="usrtel" placeholder="Type here your phone, please">
+				<textarea name="message" placeholder="Ask your question"></textarea>
+				<p>Choose your Birthday:</p>
+				<input type="date" name="bday">	
+				<p>Birthday (date and time):</p>
+				<input type="datetime-local" name="bdaytime">
+				<p>Birthday (month and year):</p>
+				<input type="month" name="bdaymonth">
+				<p>Search Google:</p>
+				<input type="search" name="googlesearch">
+				<p>Select a time:</p>
+				<input type="time" name="usr_time">
+				<p>Add your homepage:</p>
+				<input type="url" name="homepage">
+				<p>Select a week:</p>
+				<input type="week" name="year_week">				
+				<div class="form_container_2">
+					<p>Gender:</p><input type="radio" name="gender"> Male</p>
+					<input type="radio" name="gender" value="female"> Female</p>
+					<p>Your age:</p>
+					<input type="checkbox" name="age1" value="18-21">10-20
+					<input type="checkbox" name="age2" value="21-30">21-30
+					<input type="checkbox" name="age3" value="31-40">31-40
+					<input type="checkbox" name="age4" value="41-50">41-50
+					<input type="checkbox" name="age5" value="51-60">51-60
+					<input type="checkbox" name="age6" value="61-70">61-70
+					<input type="checkbox" name="age7" value="other">other
+					<p>Select your favorite color:</p><input type="color" name="favcolor" value="#ff0000">					
+					<p>Rate our website (between 1 and 5):</p>
+					<input type="number" name="quantity" min="1" max="5">
+					<p>Rate our website (points between 0 and 10):</p>
+					<input type="range" name="points" min="0" max="10">	
+				</div>
+			</div>				
+			<div class="email">
+				<input type="submit" value="Send email!">
+				<input type="reset" value="Reset">
+				<input type="button" onclick="alert('Thank you!')" value="Click Me!">
+			</div>				
+		</div>
+	</div>
+	
+	<button onclick = "topFunction()" id="myBtn" title = "Go to top">Top</button>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="npp.js"></script>
+</body>
+</html>
