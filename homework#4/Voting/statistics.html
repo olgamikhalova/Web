@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <script type="text/javascript">
+    var request = new XMLHttpRequest();
+
+	request.open('GET', 'poll_result.json', true);
+
+	request.onload = function () {
+		// begin accessing JSON data here
+		var data = JSON.parse(this.response);
+					
+		// Load the Visualization API and the piechart package.
+		google.charts.load('current', {'packages':['corechart']});
+					  
+		// Set a callback to run when the Google Visualization API is loaded.
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var pieChart = google.visualization.arrayToDataTable([
+				['Drink', 'Votes'],
+				['Tea',   data['Tea']],
+				['Coffee', data['Coffee']]
+			]);
+			var options = {
+				title: 'Favorite drink'
+			};
+
+			var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+
+			chart.draw(pieChart, options);
+
+		}
+	}
+	request.send();
+    </script>
+</head>
+<body>
+    <div id="chart_div" style="width: 900px; height: 500px;"></div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</body>
+</html>
