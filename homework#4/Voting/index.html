@@ -1,40 +1,16 @@
 <!doctype html>
 <html lang="en">
-<head>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript">
-	
-	function getVote(int) {
-		if (window.XMLHttpRequest) {
-			// code for IE7+, Firefox, Chrome, Opera, Safari
-			xmlhttp=new XMLHttpRequest();
-		} else {  // code for IE6, IE5
-			xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-		}
-		xmlhttp.onreadystatechange=function() {
-			if (this.readyState==4 && this.status==200) {
-				location.href = "statistics.html";								
-			}
-		}
-		xmlhttp.open("GET","poll_vote.php?vote="+int,true);
-		xmlhttp.send();
-	}						
-	</script>
-</head>
+<head></head>
 <body>
-
 <div id="poll">
 	<h3>What do you prefer?</h3>
-<form>
+<form method="post" action="poll_vote.php">
 	Tea:
-	<input type="radio" name="vote" value="0" onclick="getVote(this.value)">
+	<input type="radio" name="vote" value="tea_drink">
 	<br>Coffee:
-	<input type="radio" name="vote" value="1" onclick="getVote(this.value)">
+	<input type="radio" name="vote" value="coffee_drink"><br><br>
+	<input type="submit" value="Submit">
 </form>
 </div>
-
-<div id="chart_div"></div>
-
-	
 </body>
 </html> 
