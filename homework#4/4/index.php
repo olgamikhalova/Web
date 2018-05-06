@@ -5,7 +5,7 @@
 	<title>Document</title>
 </head>
 <body>
-	<form  method="get">
+	<form  method="post">
 		<p>Введите высоту шахматной доски:</p>
 		<input type="text" name="height">
 		<p>Введите ширину шахматной доски:</p>
@@ -16,8 +16,8 @@
 	
 	<?php   
 		$table = '';
-		$width  = $_GET['width'];
-		$height = $_GET['height'];
+		$width  = $_POST['width'];
+		$height = $_POST['height'];
 		for ($i = 1; $i <= $width ; $i++) { 
 			$table .= '<tr>';
 			for ($j = 1; $j <= $height ; $j++) { 
