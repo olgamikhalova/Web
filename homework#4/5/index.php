@@ -5,20 +5,20 @@
 	<title>Document</title>
 </head>
 <body> 
-	<form  method="get">
+	<form  method="post">
 		<p>Введите число:</p>
 		<input type="text" name="num">
 		<input type="submit">
 	</form>
 	<?php
-	if($_SERVER['REQUEST_METHOD']=='GET')
-		$number = $_GET['num'];
+	if($_SERVER['REQUEST_METHOD']=='POST')
+		$number = $_POST['num'];
 		do{
 			$sum += $number % 10;
 		}
 		while ($number = (int) $number / 10);
-		if (count($_GET) > 0){
-			echo "$sum";
+		if (!empty($sum)){
+			echo $sum;
 		}
     ?>
 </body>
