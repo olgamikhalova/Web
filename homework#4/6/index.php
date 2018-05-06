@@ -11,7 +11,7 @@
 			$numbers[$i] = rand(1, 10);
 		}
 		$unique = array_unique($numbers);
-		$sorted = asort($unique);
+		asort($unique);
 		$reversed = array_reverse($unique);
 		print_r($reversed);
     ?>
