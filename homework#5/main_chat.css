@@ -1,0 +1,115 @@
+html, body {
+	margin: 0;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+header {  
+    display: flex;
+} 
+
+.container1 {
+	flex: 1;
+	display: flex;
+}
+
+.container1 > div {
+	margin: 0px;
+	padding: 4px;
+	flex: 1;
+}
+
+.top1 {
+	background-color: #635960;
+}
+
+.top2 {
+	background-color: #8b8e59;
+}
+
+.top3 {
+	background-color: #eada7d;
+}
+
+.top4 {
+	background-color: #fffecd;
+}
+
+.top5 {
+	background-color: #7bc3ad;
+}
+
+.footer {  
+	background-color: #b9c783;
+	flex: 1;
+}
+
+.form_container_1 {  
+	display: flex;
+	flex-direction: column;	
+	justify-content: center;
+	align-items: center;
+	margin-top: 40px;
+}
+
+.form_container_1 h1 {
+	color: #fffecd;
+	font-family: 'Pacifico';
+	font-size: 60px;
+	font-weight: 500;
+}
+
+.form {  
+	display: flex;
+	width: 40%;	
+	/*width: 550px;*/
+}
+
+#chatbox {
+	background-color: #fffecd;
+	width: 40%;
+	height: 250px;
+	margin-bottom: 25px;
+    text-align: left;
+}
+
+.form #usermsg {
+	flex: 4;	
+	background-color: #fffecd;
+	padding: 10px;
+	border: none;
+	font-family: 'Montserrat';
+	margin-right: 25px;
+}
+
+.form #send {
+	flex: 1;
+	background-color: #635960;
+	color: #fffecd;
+	border: none;
+	font-weight: 700;	
+	padding: 10px;
+	font-family: 'Montserrat';
+	font-size: 15px;
+}
+
+
+@media screen and (max-width: 700px) {
+    .form {   
+        flex-direction: column;
+    }
+	
+	#chatbox {
+		width: 80%;
+	}
+	
+	.form #usermsg {
+		width: 100%;	
+	}
+	
+	.form #send {
+		margin-top: 25px;
+		width: 50%;	
+	}
+}
