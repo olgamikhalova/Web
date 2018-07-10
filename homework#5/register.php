@@ -15,9 +15,6 @@ if(isset($content[$user])) {
     if($content[$user] === $password){
         header('Location: main_chat.html');
     } else {
-		//header("Refresh: 0; url = chat.html");
-		//$message = "Wrong name or password. Try again.";
-        //echo "<script type='text/javascript'>document.getElementById('error_form') = '$message'</script>";
 		echo "Wrong username and/or password!";		
     }
 } else {

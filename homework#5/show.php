@@ -1,22 +1,18 @@
 <?php
 session_start();
 require 'config.php';
-
-if(isset($_POST['ajaxsend']) && $_POST['ajaxsend']==true){
-	$string = file_get_contents($filename);
-	$array = json_decode($string, true);
-	$data = "[".$array['time']."]"." "."<b>".$array['user']."</b>"." ".$array['text'];
-	echo $data;
 	
-	/*foreach($array as $val)
-		echo $val;*/
-	
-	//var_dump($chat);
-}else if(isset($_POST['ajaxget']) && $_POST['ajaxget']==true){
-	$string = file_get_contents($filename);
-	$array = json_decode($string, true);
-	$data = "[".$array['time']."]"." "."<b>".$array['user']."</b>"." ".$array['text'];
-	echo $data;
+$string = file_get_contents($filename);
+$arr = json_decode($string, true);
+$length = count($arr);
+for($i = 0; $i < $length; $i++){
+	$timeNow = time();
+	$x = $timeNow - $arr[$i]['time'];
+	if($x <= 3600){
+		$data = "[".date('H:i:s', $arr[$i]['time'])."]"." "."<b>".$arr[$i]['user']."</b>"." ".$arr[$i]['text'];
+		echo '<pre>';
+		echo $data;
+		echo '</pre>';
+	}
 }
-
 ?>

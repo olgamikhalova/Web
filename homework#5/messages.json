@@ -1,9 +1,52 @@
-{
-    "time": "12:31:54",
-    "user": "user1",
-    "text": "Hello!"
-}{
-    "time": "12:33:34",
-    "user": "user2",
-    "text": "hi!"
-}
+[
+    {
+        "time": 1531236992,
+        "user": "user2",
+        "text": "rrr"
+    },
+    {
+        "time": 1531236994,
+        "user": "user2",
+        "text": "iii"
+    },
+    {
+        "time": 1531237004,
+        "user": "user1",
+        "text": "www"
+    },
+    {
+        "time": 1531237006,
+        "user": "user1",
+        "text": "bbb"
+    },
+    {
+        "time": 1531237131,
+        "user": "user2",
+        "text": "rrr"
+    },
+    {
+        "time": 1531237157,
+        "user": "user1",
+        "text": "ggg"
+    },
+    {
+        "time": 1531237159,
+        "user": "user1",
+        "text": "hhh"
+    },
+    {
+        "time": 1531237162,
+        "user": "user2",
+        "text": "jjj"
+    },
+    {
+        "time": 1531237164,
+        "user": "user2",
+        "text": "kkk"
+    },
+    {
+        "time": 1531237167,
+        "user": "user2",
+        "text": "lll"
+    }
+]

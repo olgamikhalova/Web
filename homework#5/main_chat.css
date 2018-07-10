@@ -67,6 +67,8 @@ header {
 }
 
 #chatbox {
+	overflow: scroll;
+	overflow-x: hidden;
 	background-color: #fffecd;
 	width: 40%;
 	height: 250px;
