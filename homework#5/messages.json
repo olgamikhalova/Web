@@ -48,5 +48,15 @@
         "time": 1531237167,
         "user": "user2",
         "text": "lll"
+    },
+    {
+        "time": 1531894920,
+        "user": "olya",
+        "text": "Hello!"
+    },
+    {
+        "time": 1531894940,
+        "user": "user1",
+        "text": "Hi!"
     }
 ]
