@@ -19,7 +19,8 @@ if(is_array($json_content)) {
 
 if (!empty($text)) {
 	$content[] = array("time" => $time, "user" => $user, "text"  => $newtext);
+	file_put_contents($filename, json_encode($content, JSON_PRETTY_PRINT));
 }
 
-file_put_contents($filename, json_encode($content, JSON_PRETTY_PRINT));
+echo json_encode($content);
 ?>

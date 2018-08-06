@@ -1,12 +1,11 @@
 //sending message by pressing ENTER
 function sendMessageByEnter(){
-	var input = document.getElementById("usermsg");
-	input.addEventListener("keyup", function(event) {
-		event.preventDefault();
-		if (event.keyCode === 13) {
-			document.getElementById("send").click();
+	$('#usermsg').keyup(function (e) {
+		if (e.which == 13) {
+			$('#send').click();
+			return false;
 		}
-});
+	});
 }
 
 //sending message to messages.json
@@ -22,8 +21,7 @@ function sendMessage(){
 			method:'post',
 			success: function(data) {
 				//delete the content of the message field
-				$('#usermsg').val(''); 	
-				$('#chatbox').scrollTop($('#chatbox').prop("scrollHeight"));
+				$('#usermsg').val('');
 			},
 			error: function() {
 				$('#send_message_result').html("Message was not sent");
@@ -35,21 +33,36 @@ function sendMessage(){
 }
 
 //show all messages
-function show(){
+function showAllMessages(){
 	$.ajax({
 		url:'show.php',
 		method:'post',
 		success: function(data){
 			$('#chatbox').html(data);
-			//$('#chatbox').scrollTop($('#chatbox').prop("scrollHeight"));
+			$('#chatbox').scrollTop($('#chatbox').prop("scrollHeight"));
+		}
+	})
+}
+
+//show online messages
+function showNewMes(){
+	var usermsg = $('#usermsg').val();
+	$.ajax({
+		type : 'post',
+		url:'show_new_message.php',
+		data : {
+				'usermsg':usermsg,
+			},
+		method:'post',
+		success: function(data){
+			$('#chatbox').append(data);
+			$('#chatbox').scrollTop($('#chatbox').prop("scrollHeight"));
 		}
 	})
 }
 
 $(document).ready(sendMessageByEnter());
+$(document).ready(showAllMessages());
     
-$(document).ready(show());
-
-var interval = 1000;
-    
-setInterval('show()', interval);
+//var interval = 1000;
+//$(document).ready(setInterval('showNewMes()', interval));
